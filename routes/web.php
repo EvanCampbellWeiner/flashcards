@@ -26,3 +26,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('set','SetController');
+
+Route::get('/home/1/testdata','HomeController@json');
