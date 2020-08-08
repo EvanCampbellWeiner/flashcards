@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
 class User extends Authenticatable
 {
     use Notifiable;
@@ -44,7 +43,7 @@ class User extends Authenticatable
      */
     public function owned_sets()
     {
-        return $this->hasMany('App\Sets');
+        return $this->hasMany('App\Set', 'userID', 'id');
     }
 
 }

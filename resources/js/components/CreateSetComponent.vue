@@ -52,7 +52,9 @@
         methods: {
             createDeck(){
                 axios.post('/set/', this.set)
-                
+                this.$bvModal.hide("createDeckModal")
+                window.location.reload()
+
             }
         },
 

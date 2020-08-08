@@ -16,7 +16,7 @@
             </b-card-text>
             
             <b-button  @click="playDeck(item.id)" variant="success">Play</b-button>
-            <b-button  @click="playDeck(item.id)" variant="primary">Edit Deck</b-button>
+            <b-button  @click="addToDeck(item.id)" variant="primary">Add to Deck</b-button>
         </b-card>
     </div>
 </template>
@@ -34,6 +34,7 @@
         mounted() {
             this.getInformation()
         },
+        props: ['user'],
         methods: {
             getInformation() {
                 let self = this
@@ -53,11 +54,8 @@
             playDeck(id){
 
             },
-            editDeck(id){
-                axios.show("api/set/"+{id})
-                .catch(err=>{
-                    console.log("Error: could not show deck")
-                })
+            addToDeck(id){
+
             }
         },
 
