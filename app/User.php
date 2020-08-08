@@ -36,4 +36,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * defines the relationship to sets of cards
+     *
+     * @return void
+     */
+    public function owned_sets()
+    {
+        return $this->hasMany('App\Sets');
+    }
+
 }
