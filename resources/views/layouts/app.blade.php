@@ -36,7 +36,7 @@
                         @guest
                         @else 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('set.index') }}">{{ __('Sets') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Sets') }}</a>
                         </li>
                         @endguest
                     </ul>

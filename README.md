@@ -1,5 +1,6 @@
 //TODO Fix this
 //TODO give credit to the vue modal creator
+//TODO give credit to this:https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 

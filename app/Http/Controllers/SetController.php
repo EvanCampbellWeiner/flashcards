@@ -66,7 +66,7 @@ class SetController extends Controller
      */
     public function show(Set $set)
     {
-        //
+        return view('set')->with('set',$set);//
     }
 
     /**

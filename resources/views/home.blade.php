@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                        <set-component></set-component>
+                        <set-component v-bind:user="{{ json_encode(auth()->user()) }}"></set-component>
                 </div>
             </div>
         </div>

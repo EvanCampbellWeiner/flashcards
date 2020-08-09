@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home/1/testdata', function(){
+    return view('test');
+});
+
+Route::get('/set/json/{userid}/{setid}', function($id, $setid){
+    $cards = json_encode(DB::table('flashcards')->where('setID', $setid)->get());
+    return $cards;  
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,5 +35,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('set','SetController');
-
-Route::get('/home/1/testdata','HomeController@json');
+Route::resource('flashcard','FlashcardController');
+Route::get('/set/{set}/flashcard','FlashcardController@index');

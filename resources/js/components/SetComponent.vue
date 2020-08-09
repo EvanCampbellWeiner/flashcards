@@ -8,16 +8,31 @@
             tag="article"
             class="col-sm-4 m-2"
         >
-            <b-card-text>
-            # of cards: {{item.numberOfCards}}
-            </b-card-text>
+
             <b-card-text>
             {{item.description}}
             </b-card-text>
             
-            <b-button  @click="playDeck(item.id)" variant="success">Play</b-button>
-            <b-button  @click="addToDeck(item.id)" variant="primary">Add to Deck</b-button>
+            <b-button  v-b-modal.linkModal @click="playDeck(item.id)" variant="success">Play</b-button>
+            <b-button  @click="editDeck(item.id)" variant="primary">Edit Deck</b-button>
         </b-card>
+
+
+        <b-modal id="linkModal" title="Link to Play Deck">
+                <div class="row">
+                    <div variant="primary" class="col-sm-12">
+                    {{link}}
+                    </div>
+                    <div class="col-sm-12">
+                    <ol>
+                    <li>Copy the link above</li>
+                    <li>Click on extension on the window you wish to use.</li>
+                    <li>Paste the link in.</li>
+                    <li>Start Playing.</li>
+                    </ol>
+                    </div>
+                </div>
+            </b-modal>
     </div>
 </template>
 
@@ -29,6 +44,7 @@
                 items: [
                     
                 ],
+                link:'',
             }
         },
         mounted() {
@@ -52,10 +68,12 @@
                     })
             },
             playDeck(id){
+                  this.check=true;
+                  this.link = "set/json/"+this.user.id+"/"+id;
 
             },
-            addToDeck(id){
-
+            editDeck(id){
+                window.location.href = 'set/'+ id
             }
         },
 

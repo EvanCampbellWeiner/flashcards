@@ -1,8 +1,4 @@
 [
-    {"type":"header","version":"4.9.2","comment":"Export to JSON plugin for PHPMyAdmin"},
-    {"type":"database","name":"flashcards"},
-    {"type":"table","name":"sets","database":"flashcards","data":
-    [
     {"id":"1","title":"Rylee Randolph","numberOfCards":"0","userID":"1","description":"Dolor cum ut illo co","created_at":"2020-08-08 15:43:02","updated_at":"2020-08-08 15:43:02"},
     {"id":"2","title":"Rylee Randolph","numberOfCards":"0","userID":"1","description":"Dolor cum ut illo co","created_at":"2020-08-08 15:43:05","updated_at":"2020-08-08 15:43:05"},
     {"id":"3","title":"Rylee Randolph","numberOfCards":"0","userID":"1","description":"Dolor cum ut illo co","created_at":"2020-08-08 15:43:05","updated_at":"2020-08-08 15:43:05"},
@@ -14,6 +10,4 @@
     {"id":"9","title":"Wallace Cotton","numberOfCards":"0","userID":"1","description":"Dolores repudiandae","created_at":"2020-08-08 16:42:38","updated_at":"2020-08-08 16:42:38"},
     {"id":"10","title":"Mark Bishop","numberOfCards":"0","userID":"1","description":"In ex qui quia lorem","created_at":"2020-08-08 16:44:17","updated_at":"2020-08-08 16:44:17"},
     {"id":"11","title":"Florence Zamora","numberOfCards":"0","userID":"1","description":"Veritatis ut repelle","created_at":"2020-08-08 17:00:27","updated_at":"2020-08-08 17:00:27"}
-    ]
-    }
 ]

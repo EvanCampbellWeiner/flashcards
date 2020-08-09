@@ -18,4 +18,8 @@ class Set extends Model
     public function owner() {
         return $this->belongsTo('App\User', 'userID', 'id');
     }
+
+    public function cards(){
+        return $this->hasMany('App\Flashcard', 'setID', 'id');
+    }
 }
