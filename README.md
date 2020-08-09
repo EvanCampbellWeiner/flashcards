@@ -1,7 +1,3 @@
-//TODO Fix this
-//TODO give credit to the vue modal creator
-//TODO give credit to this:https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
-
 ## About Project
 
 Welcome to my flashcard extension web application! This product is designed for students who are looking to study 
@@ -25,13 +21,16 @@ flashcards while watching netflix/youtube/twitch/lectures/sporting events. It wa
     7. Study! Study! Study!
 
 ## About Me
-My name is Evan Campbell-Weiner and I am a third-year Trent University student. 
+My name is Evan Campbell-Weiner and I am a third-year Trent University student.
+
 <a href="https://www.evancampbellweiner.com"> My Website</a>
 
-<a href="https://www.linkedin.com/in/evancampbellweiner/"> My LinkedIn</a>
+<a href="https://www.linkedin.com/in/evancampbellweiner/"> My LinkedIn</at >
 
-
+## Acknowledgements
+Laravel - https://laravel.com/docs/7.x
+<a href="https://fontawesome.com/license">FontAwesome for the Play Circle Button</a>
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT).
