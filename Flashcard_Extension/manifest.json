@@ -1,0 +1,30 @@
+{
+    "name": "Flashcard Extension",
+    "version": "1.0",
+    "description": "An flashcard practice extension.",
+    "permissions": ["declarativeContent", "storage","activeTab","http://*/*",
+        "https://*/"],
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["thirdParty/jquery-3.5.1.js","background.js"],
+        "persistent": false
+      },
+      "page_action": {
+        "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/glasses.png",
+        "32": "images/glasses.png",
+        "48": "images/glasses.png",
+        "128": "images/glasses.png"
+        }
+      },
+      "icons": {
+        "16": "images/glasses.png",
+        "32": "images/glasses.png",
+        "48": "images/glasses.png",
+        "128": "images/glasses.png"
+      },
+
+    "manifest_version": 2
+    
+  }
