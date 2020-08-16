@@ -22,8 +22,11 @@ Route::get('/home/1/testdata', function(){
 });
 
 Route::get('/set/json/{userid}/{setid}', function($id, $setid){
-    $cards = json_encode(DB::table('flashcards')->where('setID', $setid)->get());
-    return $cards;  
+    $cards = DB::table('flashcards')->where('setID', $setid)->get();
+    $collection = collect($cards);
+    $collection = $collection->shuffle();
+    
+    return json_encode($collection);  
 });
 
 Auth::routes();

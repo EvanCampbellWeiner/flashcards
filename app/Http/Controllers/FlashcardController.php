@@ -6,7 +6,7 @@ use App\Flashcard;
 use Illuminate\Http\Request;
 use App\Set;
 use Illuminate\Support\Facades\DB;
-
+use App\Http\Requests\UpdateFlashcard;
 
 class FlashcardController extends Controller
 {
@@ -68,9 +68,9 @@ class FlashcardController extends Controller
      * @param  \App\Flashcard  $flashcard
      * @return \Illuminate\Http\Response
      */
-    public function edit(Set $set)
+    public function edit(Flashcard $flashcard)
     {
-        return $set->decks();
+
     }
 
     /**
@@ -82,7 +82,15 @@ class FlashcardController extends Controller
      */
     public function update(Request $request, Flashcard $flashcard)
     {
-        //
+        $validated = $request->validate([
+            'Question' => 'required',
+            'Answer' => 'required',
+
+        ]);
+        $flashcard->Question = $validated['Question'];
+        $flashcard->Answer = $validated['Answer'];
+        $flashcard->save();
+        return $flashcard;
     }
 
     /**
@@ -93,6 +101,6 @@ class FlashcardController extends Controller
      */
     public function destroy(Flashcard $flashcard)
     {
-        //
+        $flashcard->delete();
     }
 }
